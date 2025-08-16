@@ -1,0 +1,2 @@
+# smk
+persiapan pembuatan smk
