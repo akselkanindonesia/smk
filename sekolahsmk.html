@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SMK Multimedia — Kurikulum Pro-Siswa</title>
+<meta name="description" content="SMK Multimedia dengan kurikulum mandiri yang profesional, modern, dan berpihak pada siswa. Daftar sekarang!" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
+.reveal { opacity: 0; transform: translateY(12px); transition: all 700ms ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+/* Soft gradient accents */
+.gradient-hero { background: radial-gradient(1200px 800px at 80% -10%, rgba(16,185,129,0.25), transparent 60%), radial-gradient(1000px 600px at -10% 20%, rgba(59,130,246,0.18), transparent 60%), linear-gradient(120deg, #0b1020, #0f172a 40%, #0b1020); }
+.glass { backdrop-filter: blur(10px); background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.18); }
+.btn { transition: transform .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(16,185,129,.25); }
+.floating { animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%,100%{ transform: translateY(0);}50%{ transform: translateY(-8px);} }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+<!-- Navigation -->
+<header class="sticky top-0 z-40 border-b border-white/5 bg-slate-950/70 backdrop-blur">
+<div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+<a href="#" class="flex items-center gap-3">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-blue-500 text-slate-900 font-black">MM</span>
+<span class="text-lg font-bold tracking-tight">SMK Multimedia</span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+<a href="#kurikulum" class="hover:text-white">Kurikulum</a>
+<a href="#fasilitas" class="hover:text-white">Fasilitas</a>
+<a href="#portofolio" class="hover:text-white">Portofolio</a>
+<a href="#mitra" class="hover:text-white">Mitra</a>
+<a href="#faq" class="hover:text-white">FAQ</a>
+<a href="#daftar" class="ml-2 rounded-full bg-emerald-400/90 px-4 py-2 font-semibold text-slate-900 btn">Daftar Sekarang</a>
+</nav>
+<button id="menuBtn" class="md:hidden rounded-xl border border-white/10 p-2">☰</button>
+</div>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="md:hidden hidden border-t border-white/5">
+<div class="mx-auto max-w-7xl px-4 py-3 grid gap-3 text-slate-200">
+<a href="#kurikulum" class="hover:text-white">Kurikulum</a>
+<a href="#fasilitas" class="hover:text-white">Fasilitas</a>
+<a href="#portofolio" class="hover:text-white">Portofolio</a>
+<a href="#mitra" class="hover:text-white">Mitra</a>
+<a href="#faq" class="hover:text-white">FAQ</a>
+<a href="#daftar" class="rounded-xl bg-emerald-400/90 px-4 py-2 font-semibold text-slate-900 btn text-center">Daftar Sekarang</a>
+</div>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="gradient-hero relative">
+<div class="absolute inset-0 -z-10 opacity-20" style="background-image: radial-gradient(circle at 30% 20%, #22d3ee 0, transparent 40%), radial-gradient(circle at 80% 10%, #34d399 0, transparent 40%);"></div>
+<div class="mx-auto max-w-7xl px-4 py-24 md:py-28">
+<div class="grid md:grid-cols-2 items-center gap-10">
+<div class="reveal">
+<span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">Kurikulum Mandiri • Berpihak pada Siswa</span>
+<h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+Bangun Karier Kreatif di <span class="bg-gradient-to-r from-emerald-300 via-cyan-300 to-blue-300 bg-clip-text text-transparent">SMK Multimedia</span>
+</h1>
+<p class="mt-5 text-slate-300 max-w-xl">Kami merancang kurikulum sendiri yang modern, dinamis, dan relevan industri—mendorong proses belajar berbasis proyek, portofolio nyata, dan pembimbingan personal agar setiap siswa berkembang optimal.</p>
+<div class="mt-8 flex flex-wrap items-center gap-3">
+<a id="ctaTop" href="#daftar" class="btn rounded-2xl bg-emerald-400 px-6 py-3 font-semibold text-slate-900">Daftar Sekarang</a>
+<a href="#kurikulum" class="rounded-2xl border border-white/10 px-6 py-3 font-semibold">Lihat Kurikulum</a>
+</div>
+<div class="mt-6 flex items-center gap-6 text-sm text-slate-400">
+<div>
+<div class="text-2xl font-extrabold text-white" id="stat1">0</div>
+<div>Lulusan Terserap Industri</div>
+</div>
+<div>
+<div class="text-2xl font-extrabold text-white" id="stat2">0</div>
+<div>Jam Proyek Nyata</div>
+</div>
+<div>
+<div class="text-2xl font-extrabold text-white" id="stat3">0</div>
+<div>Mitra Industri Aktif</div>
+</div>
+</div>
+</div>
+<div class="relative reveal">
+<div class="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-emerald-500/10 to-blue-500/10 blur-2xl"></div>
+<div class="glass rounded-3xl p-2">
+<img class="h-[420px] w-full object-cover rounded-2xl floating" src="https://images.unsplash.com/photo-1518779557562-0b40d19d7c9a?q=80&w=1600&auto=format&fit=crop" alt="Siswa SMK Multimedia berkolaborasi" />
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Kurikulum -->
+<section id="kurikulum" class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold">Kurikulum Unggulan, Dirancang Pro-Siswa</h2>
+<p class="mt-3 text-slate-300 max-w-2xl mx-auto">Struktur belajar adaptif yang memadukan kompetensi teknis, soft skills, dan pengalaman industri. Fokus pada <span class="text-emerald-300 font-semibold">project-based learning</span> dan <span class="text-emerald-300 font-semibold">portofolio</span>.</p>
+</div>
+<div class="mt-10 grid md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Desain Visual & Branding</div>
+<p class="mt-2 text-sm text-slate-300">Tipografi, teori warna, UI/UX dasar, identitas merek, kampanye visual multikanal.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>Adobe Photoshop, Illustrator, Figma</li>
+<li>Desain Sistem UI, Prototyping</li>
+<li>Portofolio: Brand Kit & Style Guide</li>
+</ul>
+</div>
+<!-- Card 2 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Produksi Konten & Animasi</div>
+<p class="mt-2 text-sm text-slate-300">Sinematografi, audio, motion graphics, editing profesional untuk berbagai platform.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>Premiere Pro, After Effects, DaVinci Resolve</li>
+<li>2D/3D Motion, Visual Storytelling</li>
+<li>Portofolio: Iklan 30s & Bumper</li>
+</ul>
+</div>
+<!-- Card 3 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Web & Interaktif</div>
+<p class="mt-2 text-sm text-slate-300">Dasar pemrograman, desain web modern, interaksi, dan optimasi performa.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>HTML, CSS, JavaScript, Tailwind</li>
+<li>UI Interaktif, Aksesibilitas</li>
+<li>Portofolio: Landing Page Produk</li>
+</ul>
+</div>
+</div>
+<div class="mt-8 grid md:grid-cols-3 gap-6">
+<!-- Card 4 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Strategi Media Digital</div>
+<p class="mt-2 text-sm text-slate-300">Kampanye media sosial, analitik, dan produksi terjadwal berbasis tujuan.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>Content Calendar & KPI</li>
+<li>Copywriting & Storytelling</li>
+<li>Portofolio: Social Campaign</li>
+</ul>
+</div>
+<!-- Card 5 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Kesiapan Karier</div>
+<p class="mt-2 text-sm text-slate-300">Magang terstruktur, mentoring, dan sertifikasi kompetensi berjenjang.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>Career Coaching 1:1</li>
+<li>Simulasi Wawancara</li>
+<li>Portofolio: Showreel & CV</li>
+</ul>
+</div>
+<!-- Card 6 -->
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+<div class="text-xl font-bold">Kurikulum Adaptif</div>
+<p class="mt-2 text-sm text-slate-300">Jalur percepatan & diferensiasi sesuai minat serta kecepatan belajar siswa.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+<li>Rencana Belajar Personal</li>
+<li>Proyek Klien Nyata</li>
+<li>Evaluasi Berbasis Evidence</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Fasilitas -->
+<section id="fasilitas" class="bg-slate-900/40">
+<div class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold">Fasilitas Industri Kelas Profesional</h2>
+<p class="mt-3 text-slate-300 max-w-2xl mx-auto">Studio kreatif, peralatan sinema, lab komputer performa tinggi, dan ruang kolaborasi modern.</p>
+</div>
+<div class="mt-10 grid md:grid-cols-4 gap-6">
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-5">Studio Foto & Video</div>
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-5">Lab Editing & Color Grading</div>
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-5">Perangkat Audio Profesional</div>
+<div class="reveal rounded-3xl border border-white/10 bg-white/5 p-5">Ruang Presentasi & Screening</div>
+</div>
+</div>
+</section>
+
+<!-- Portofolio -->
+<section id="portofolio" class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold">Portofolio Siswa</h2>
+<p class="mt-3 text-slate-300">Karya terbaik dari proyek nyata dan kolaborasi lintas industri.</p>
+</div>
+<div class="mt-10 grid md:grid-cols-3 gap-6">
+<img class="reveal rounded-2xl h-64 w-full object-cover" src="https://images.unsplash.com/photo-1520975922284-8b456906c813?q=80&w=1400&auto=format&fit=crop" alt="Desain Visual" />
+<img class="reveal rounded-2xl h-64 w-full object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop" alt="Produksi Video" />
+<img class="reveal rounded-2xl h-64 w-full object-cover" src="https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=1400&auto=format&fit=crop" alt="Web Interaktif" />
+</div>
+</section>
+
+<!-- Mitra -->
+<section id="mitra" class="bg-slate-900/40">
+<div class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold">Mitra Industri</h2>
+<p class="mt-3 text-slate-300">Jejaring kolaborasi untuk magang, proyek klien, dan rekrutmen.</p>
+</div>
+<div class="mt-10 grid grid-cols-2 md:grid-cols-6 gap-6 items-center opacity-90">
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Studio A</div>
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Agensi B</div>
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Startup C</div>
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Production D</div>
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Media E</div>
+<div class="reveal rounded-xl border border-white/10 bg-white/5 p-5 text-center">Brand F</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="daftar" class="relative">
+<div class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal overflow-hidden rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 to-blue-500/10 p-8 md:p-12">
+<div class="grid md:grid-cols-2 items-center gap-8">
+<div>
+<h3 class="text-2xl md:text-3xl font-extrabold">Siap Memulai Perjalanan Kreatifmu?</h3>
+<p class="mt-2 text-slate-300">Bergabunglah dengan SMK Multimedia dan dapatkan kurikulum profesional yang berpihak pada siswa, mentor berpengalaman, dan akses industri nyata.</p>
+<ul class="mt-4 text-slate-200 list-disc list-inside">
+<li>Belajar berbasis proyek & portofolio</li>
+<li>Magang & sertifikasi industri</li>
+<li>Beasiswa & jalur percepatan</li>
+</ul>
+</div>
+<form class="glass rounded-2xl p-6 grid gap-3">
+<label class="text-sm text-slate-300">Nama Lengkap</label>
+<input type="text" placeholder="Nama kamu" class="rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-emerald-400/60" required>
+<label class="text-sm text-slate-300">Email / No. WA</label>
+<input type="text" placeholder="email@contoh.com / 08xxxxxxxxxx" class="rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-emerald-400/60" required>
+<label class="text-sm text-slate-300">Minat Utama</label>
+<select class="rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-emerald-400/60">
+<option>Desain Visual</option>
+<option>Produksi Konten</option>
+<option>Animasi</option>
+<option>Web & Interaktif</option>
+</select>
+<button type="submit" class="mt-2 btn rounded-2xl bg-emerald-400 px-6 py-3 font-semibold text-slate-900">Daftar Sekarang</button>
+<p class="text-xs text-slate-400">Dengan mendaftar, Anda setuju dengan kebijakan privasi kami.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="mx-auto max-w-7xl px-4 py-20">
+<div class="reveal text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold">Pertanyaan Umum</h2>
+</div>
+<div class="mt-8 grid md:grid-cols-2 gap-6">
+<details class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 group">
+<summary class="cursor-pointer font-semibold group-open:text-emerald-300">Apa keunggulan kurikulum mandiri kami?</summary>
+<p class="mt-2 text-slate-300">Kurikulum dirancang bersama praktisi sehingga konten selalu relevan, fleksibel, dan mengutamakan kebutuhan belajar siswa.</p>
+</details>
+<details class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 group">
+<summary class="cursor-pointer font-semibold group-open:text-emerald-300">Apakah ada program magang?</summary>
+<p class="mt-2 text-slate-300">Ya, kami memiliki penempatan magang terstruktur di mitra industri dengan pembimbingan langsung.</p>
+</details>
+<details class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 group">
+<summary class="cursor-pointer font-semibold group-open:text-emerald-300">Bagaimana skema beasiswa?</summary>
+<p class="mt-2 text-slate-300">Tersedia beasiswa prestasi, talenta kreatif, dan dukungan finansial berdasarkan asesmen.</p>
+</details>
+<details class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 group">
+<summary class="cursor-pointer font-semibold group-open:text-emerald-300">Apakah siswa pemula bisa mendaftar?</summary>
+<p class="mt-2 text-slate-300">Sangat bisa. Terdapat kelas pengantar dan jalur percepatan sesuai kecepatan belajar masing-masing.</p>
+</details>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/5 bg-slate-950">
+<div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center gap-3">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-blue-500 text-slate-900 font-black">MM</span>
+<span class="text-lg font-bold tracking-tight">SMK Multimedia</span>
+</div>
+<p class="mt-3 text-slate-400 text-sm">Mencetak talenta kreatif yang siap industri melalui kurikulum profesional yang berpihak pada siswa.</p>
+</div>
+<div>
+<div class="font-semibold mb-3">Program</div>
+<ul class="space-y-2 text-sm text-slate-300">
+<li><a href="#kurikulum" class="hover:text-white">Kurikulum</a></li>
+<li><a href="#portofolio" class="hover:text-white">Portofolio</a></li>
+<li><a href="#mitra" class="hover:text-white">Mitra</a></li>
+</ul>
+</div>
+<div>
+<div class="font-semibold mb-3">Bantuan</div>
+<ul class="space-y-2 text-sm text-slate-300">
+<li><a href="#faq" class="hover:text-white">FAQ</a></li>
+<li><a href="#daftar" class="hover:text-white">Daftar</a></li>
+<li><a href="#" class="hover:text-white">Kebijakan Privasi</a></li>
+</ul>
+</div>
+<div>
+<div class="font-semibold mb-3">Kontak</div>
+<ul class="space-y-2 text-sm text-slate-300">
+<li>Email: info@smkmultimedia.sch.id</li>
+<li>WA: 08xx-xxxx-xxxx</li>
+<li>Alamat: Kota Anda</li>
+</ul>
+<a href="#daftar" class="mt-4 inline-block rounded-2xl bg-emerald-400 px-5 py-3 font-semibold text-slate-900 btn">Daftar Sekarang</a>
+</div>
+</div>
+<div class="border-t border-white/5 py-6 text-center text-xs text-slate-500">© <span id="year"></span> SMK Multimedia. All rights reserved.</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) entry.target.classList.add('visible');
+});
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Simple counters
+function animateCounter(el, target, duration = 1400) {
+let start = 0; const step = Math.max(1, Math.floor(target / (duration / 16)));
+const tick = () => {
+start += step; if (start >= target) { el.textContent = target.toLocaleString('id-ID'); return; }
+el.textContent = start.toLocaleString('id-ID'); requestAnimationFrame(tick);
+};
+tick();
+}
+window.addEventListener('load', () => {
+animateCounter(document.getElementById('stat1'), 298); // contoh data
+animateCounter(document.getElementById('stat2'), 12000);
+animateCounter(document.getElementById('stat3'), 46);
+document.getElementById('year').textContent = new Date().getFullYear();
+});
+
+// CTA events (replace with actual tracking/submit)
+document.getElementById('ctaTop').addEventListener('click', () => {
+console.log('CTA Top clicked');
+});
+</script>
+</body>
+</html>
